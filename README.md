@@ -6,14 +6,14 @@
 ##### 1. pull docker image
 
 ```
-sudo docker pull didadidaboom/hadoopset:1
+sudo docker pull didadidaboom/hadoopset:2.0
 sudo docker pull mysql
 ```
 
 ##### 2. clone github repository
 
 ```
-git clone https://github.com/didadidaboom/hadoopset-cluster-docker.git
+git clone https://github.com/didadidaboom/hadoopset2-cluster-docker.git
 ```
 
 ##### 3. create hadoop network
@@ -25,7 +25,7 @@ sudo docker network create --driver=bridge hadoop
 ##### 4. start container
 
 ```
-cd hadoop-cluster-docker
+cd hadoopset2-cluster-docker
 sudo ./start-container.sh
 ```
 
@@ -123,6 +123,22 @@ start-hbase.sh
 hbase shell
 ```
 
+### Start sqoop
+
+##### 1. Test sqoop
+```
+sqoop-version
+```
+Output:
+```
+1111
+```
+
+##### 2. run sqoop
+```
+sqoop import --connect jdbc:mysql://hadoop-mysql:3306/test --username root --password hive --table testname -m 1
+```
+
 ### Start spark
 
 ##### 1. Start spark
@@ -164,5 +180,5 @@ or check by browsing web management page: http://hadoop-master:8080
 ```
 
 ### What are the differeces from https://github.com/kiwenlau/hadoop-cluster-docker:
-1. including hive, hbase, and spark
+1. including hive, hbase, sqoop, and spark
 2. ubuntu 18.04
