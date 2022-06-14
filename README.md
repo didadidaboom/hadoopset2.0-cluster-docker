@@ -1,7 +1,7 @@
-## Run Hadoop with hive, hbase, and spark Cluster within Docker Containers
+## Run Hadoop with hive, hbase, sqoop, and spark Cluster within Docker Containers
 
 
-### 3 Nodes Hadoop set (including hive, hbase, spark) Cluster
+### 3 Nodes Hadoop set (included hive, hbase, sqoop, spark) Cluster
 
 ##### 1. pull docker image
 
