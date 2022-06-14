@@ -181,7 +181,7 @@ or check by browsing web management page: http://hadoop-master:8080
 ```
 
 ### What are the differeces from https://github.com/kiwenlau/hadoop-cluster-docker:
-1. including hive, hbase, and spark
+1. included hive, hbase, and spark
 2. ubuntu 18.04
 
 ### What are the differeces from https://github.com/didadidaboom/hadoopset-cluster-docker.git:
